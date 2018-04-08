@@ -1,0 +1,1 @@
+pyuic4 sermv.ui > serm.py
