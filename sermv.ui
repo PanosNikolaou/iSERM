@@ -1,0 +1,2288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1416</width>
+    <height>736</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>iSERM - Intelligent Decision Support System for Environmental Risk Management</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normalon>:/images/orbz-fire-icon.png</normalon>
+   </iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabMenu">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <family>MS Shell Dlg 2</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::West</enum>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="elideMode">
+       <enum>Qt::ElideNone</enum>
+      </property>
+      <property name="documentMode">
+       <bool>false</bool>
+      </property>
+      <property name="tabsClosable">
+       <bool>false</bool>
+      </property>
+      <property name="movable">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="tb_data_monitoring">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <attribute name="icon">
+        <iconset>
+         <normalon>:/images/Letter_M_Icon_16.png</normalon>
+        </iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Monitor Transmitted Data</string>
+       </attribute>
+       <widget class="QWebView" name="webView">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>159</y>
+          <width>811</width>
+          <height>511</height>
+         </rect>
+        </property>
+        <property name="url">
+         <url>
+          <string>about:blank</string>
+         </url>
+        </property>
+       </widget>
+       <widget class="QLCDNumber" name="lcdNumber_ffwi">
+        <property name="geometry">
+         <rect>
+          <x>480</x>
+          <y>40</y>
+          <width>91</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="lineWidth">
+         <number>1</number>
+        </property>
+        <property name="midLineWidth">
+         <number>0</number>
+        </property>
+        <property name="smallDecimalPoint">
+         <bool>true</bool>
+        </property>
+        <property name="numDigits">
+         <number>3</number>
+        </property>
+        <property name="digitCount">
+         <number>3</number>
+        </property>
+        <property name="segmentStyle">
+         <enum>QLCDNumber::Filled</enum>
+        </property>
+        <property name="value" stdset="0">
+         <double>0.000000000000000</double>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_riskstate">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>40</y>
+          <width>101</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>MS Shell Dlg 2</family>
+          <pointsize>20</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <property name="lineWidth">
+         <number>1</number>
+        </property>
+        <property name="text">
+         <string>STATE :</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_RiskStateValue">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>40</y>
+          <width>131</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="geometry">
+         <rect>
+          <x>850</x>
+          <y>60</y>
+          <width>451</width>
+          <height>621</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Linear Regression [ Risk ~ RecId ]</string>
+        </property>
+        <widget class="QWidget" name="gridLayoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>431</width>
+           <height>281</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout">
+          <property name="margin">
+           <number>0</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QWidget" name="widget" native="true">
+            <property name="autoFillBackground">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QPushButton" name="pushButton_predict_risk">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>370</y>
+           <width>191</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>-1</pointsize>
+           <underline>false</underline>
+           <strikeout>false</strikeout>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton { 
+    background-color: #991100; 
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+QPushButton:hover {
+	 color: red;
+    background-color: #33AA22;
+ }</string>
+         </property>
+         <property name="text">
+          <string>Predict Risk</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="txt_mean">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>450</y>
+           <width>161</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lbl_premean">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>450</y>
+           <width>261</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Predicted mean risk value is :</string>
+         </property>
+        </widget>
+        <widget class="QDial" name="dial">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>350</y>
+           <width>121</width>
+           <height>91</height>
+          </rect>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>12</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="invertedControls">
+          <bool>false</bool>
+         </property>
+         <property name="wrapping">
+          <bool>true</bool>
+         </property>
+         <property name="notchesVisible">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lbl_dial">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>380</y>
+           <width>81</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="text">
+          <string>hours</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_6">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>310</y>
+           <width>431</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>MS Shell Dlg 2</family>
+           <pointsize>14</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Dial to hours from now to predict the future risk</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lbl_dialnum">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>380</y>
+           <width>31</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lbl_premax">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>530</y>
+           <width>241</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Predicted max risk value is :</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="txt_max">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>530</y>
+           <width>161</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lbl_premiin">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>490</y>
+           <width>241</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Predicted min risk value is :</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="txt_min">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>490</y>
+           <width>161</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="txt_max_2">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>570</y>
+           <width>161</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lbl_premax_2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>570</y>
+           <width>201</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Predicted risk state is :</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>831</width>
+          <height>671</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Monitoring Transmitted Data</string>
+        </property>
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>28</x>
+           <y>99</y>
+           <width>111</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Temperature</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_2">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>100</y>
+           <width>101</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Rel Humidity</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_4">
+         <property name="geometry">
+          <rect>
+           <x>640</x>
+           <y>106</y>
+           <width>81</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Wind Dir</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="ln_ctmp">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>100</y>
+           <width>91</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="ln_relh">
+         <property name="geometry">
+          <rect>
+           <x>342</x>
+           <y>100</y>
+           <width>91</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="ln_wndsp">
+         <property name="geometry">
+          <rect>
+           <x>530</x>
+           <y>100</y>
+           <width>91</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="ln_wnd">
+         <property name="geometry">
+          <rect>
+           <x>722</x>
+           <y>100</y>
+           <width>91</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_4">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>811</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="title">
+          <string>Current weather conditions in Tripolis</string>
+         </property>
+         <widget class="QLabel" name="label_3">
+          <property name="geometry">
+           <rect>
+            <x>430</x>
+            <y>25</y>
+            <width>81</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Wind (kph)</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QLabel" name="lbl_riskstate_4">
+         <property name="geometry">
+          <rect>
+           <x>570</x>
+           <y>30</y>
+           <width>141</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>MS Shell Dlg 2</family>
+           <pointsize>20</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Sunken</enum>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="text">
+          <string>FIRE RISK :</string>
+         </property>
+        </widget>
+        <widget class="QLCDNumber" name="lcdNumber_risk">
+         <property name="geometry">
+          <rect>
+           <x>710</x>
+           <y>30</y>
+           <width>111</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="midLineWidth">
+          <number>0</number>
+         </property>
+         <property name="smallDecimalPoint">
+          <bool>false</bool>
+         </property>
+         <property name="numDigits">
+          <number>5</number>
+         </property>
+         <property name="digitCount">
+          <number>5</number>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Filled</enum>
+         </property>
+         <property name="value" stdset="0">
+          <double>0.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lbl_risk">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>30</y>
+           <width>221</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>20</pointsize>
+          </font>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Sunken</enum>
+         </property>
+         <property name="text">
+          <string>FOSBERG INDEX :</string>
+         </property>
+        </widget>
+        <zorder>groupBox_4</zorder>
+        <zorder>label</zorder>
+        <zorder>label_2</zorder>
+        <zorder>label_4</zorder>
+        <zorder>ln_ctmp</zorder>
+        <zorder>ln_relh</zorder>
+        <zorder>ln_wndsp</zorder>
+        <zorder>ln_wnd</zorder>
+        <zorder>lbl_riskstate_4</zorder>
+        <zorder>lcdNumber_risk</zorder>
+        <zorder>lbl_risk</zorder>
+       </widget>
+       <widget class="QDateTimeEdit" name="dateTimeEdit">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>850</x>
+          <y>20</y>
+          <width>451</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>OCR A Extended</family>
+          <pointsize>18</pointsize>
+          <italic>false</italic>
+         </font>
+        </property>
+        <property name="wrapping">
+         <bool>false</bool>
+        </property>
+        <property name="frame">
+         <bool>true</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+        <property name="buttonSymbols">
+         <enum>QAbstractSpinBox::NoButtons</enum>
+        </property>
+        <property name="accelerated">
+         <bool>true</bool>
+        </property>
+        <property name="calendarPopup">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <zorder>groupBox_2</zorder>
+       <zorder>groupBox</zorder>
+       <zorder>webView</zorder>
+       <zorder>lcdNumber_ffwi</zorder>
+       <zorder>lbl_riskstate</zorder>
+       <zorder>lbl_RiskStateValue</zorder>
+       <zorder>dateTimeEdit</zorder>
+      </widget>
+      <widget class="QWidget" name="tb_data_view">
+       <attribute name="icon">
+        <iconset>
+         <normalon>:/images/Letter_V_Icon_16.png</normalon>
+        </iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Data View</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QTableView" name="tableView">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">selection-background-color: rgba(252, 168, 0, 150);
+QTableCornerButton::section {
+    background: red;
+    border: 2px outset red;
+}</string>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+          <property name="midLineWidth">
+           <number>0</number>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <property name="sortingEnabled">
+           <bool>false</bool>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+          <attribute name="horizontalHeaderCascadingSectionResizes">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>120</number>
+          </attribute>
+          <attribute name="horizontalHeaderMinimumSectionSize">
+           <number>70</number>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderCascadingSectionResizes">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="verticalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_data_analysis">
+       <attribute name="icon">
+        <iconset>
+         <normalon>:/images/Letter_A_Icon_16.png</normalon>
+        </iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Data Analysis</string>
+       </attribute>
+       <widget class="QWidget" name="gridLayoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>20</y>
+          <width>941</width>
+          <height>651</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_DA_plot">
+         <item row="0" column="0">
+          <widget class="QWidget" name="widget_scatter" native="true"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_3">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>301</width>
+          <height>671</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Data Analysis</string>
+        </property>
+        <widget class="QPushButton" name="pushButton_DA_showplot">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>584</y>
+           <width>251</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+           <underline>false</underline>
+           <strikeout>false</strikeout>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Scatter Plot Matrix</string>
+         </property>
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_DA_data_consist">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>30</y>
+           <width>271</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <underline>false</underline>
+           <strikeout>false</strikeout>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Data Consistency Check</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_DA_coefficient">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>490</y>
+           <width>141</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_DA_pvalue">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>530</y>
+           <width>141</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lbl_pvalue">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>530</y>
+           <width>81</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>P-value :</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lbl_coeficient">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>490</y>
+           <width>91</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Coefficient :</string>
+         </property>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_8">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>240</y>
+           <width>251</width>
+           <height>191</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="title">
+          <string>Risk Over [ Select Variable ]</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+         <widget class="QRadioButton" name="radioButton_PM_TMP">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>60</y>
+            <width>150</width>
+            <height>25</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>13</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Temperature</string>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="radioButton_PM_HM">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>90</y>
+            <width>150</width>
+            <height>25</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>13</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Humidity</string>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="radioButton_PM_SMK">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>120</y>
+            <width>150</width>
+            <height>25</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>13</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Smoke</string>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="radioButton_PM_WNSPD">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>150</y>
+            <width>150</width>
+            <height>25</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>13</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Windspeed</string>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="radioButton_PM_FWI">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>30</y>
+            <width>150</width>
+            <height>25</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>13</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Fosberg Index</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_9">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>80</y>
+           <width>271</width>
+           <height>491</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Risk Correlation Calculation</string>
+         </property>
+         <widget class="QRadioButton" name="radioButton_PM_RISK">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>130</y>
+            <width>150</width>
+            <height>25</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Fire Risk</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_DA_pearson">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>360</y>
+            <width>251</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <underline>false</underline>
+            <strikeout>false</strikeout>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Calculate correlation factors</string>
+          </property>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_11">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>30</y>
+            <width>251</width>
+            <height>91</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="title">
+           <string>Select Corellation Method</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+          <widget class="QRadioButton" name="radioButton_DA_pears">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>30</y>
+             <width>221</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Pearson</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_DA_spear">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>60</y>
+             <width>221</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Spearman</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QComboBox" name="comboBox_DA_diag">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>630</y>
+           <width>161</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <item>
+          <property name="text">
+           <string>Histogram</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QLabel" name="label_5">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>630</y>
+           <width>91</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Diagonal :</string>
+         </property>
+        </widget>
+        <zorder>groupBox_9</zorder>
+        <zorder>pushButton_DA_showplot</zorder>
+        <zorder>pushButton_DA_data_consist</zorder>
+        <zorder>lineEdit_DA_coefficient</zorder>
+        <zorder>lineEdit_DA_pvalue</zorder>
+        <zorder>lbl_pvalue</zorder>
+        <zorder>lbl_coeficient</zorder>
+        <zorder>groupBox_8</zorder>
+        <zorder>comboBox_DA_diag</zorder>
+        <zorder>label_5</zorder>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_5">
+        <property name="geometry">
+         <rect>
+          <x>320</x>
+          <y>10</y>
+          <width>981</width>
+          <height>671</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+       </widget>
+       <zorder>groupBox_5</zorder>
+       <zorder>groupBox_3</zorder>
+       <zorder>gridLayoutWidget_2</zorder>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="icon">
+        <iconset>
+         <normalon>:/images/Letter_M_Icon_16.png</normalon>
+        </iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Predictive Models</string>
+       </attribute>
+       <widget class="QPushButton" name="pushButton_PM_H2Oinit">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>40</y>
+          <width>391</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <underline>false</underline>
+          <strikeout>false</strikeout>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>H2O Initialization </string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_PM_h2o_response">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>90</y>
+          <width>391</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>[ H2O Server Response ]</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_6">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>431</width>
+          <height>671</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Deep Learning Settings</string>
+        </property>
+        <widget class="QLineEdit" name="lineEdit_PM_RMSE">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>560</y>
+           <width>151</width>
+           <height>25</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_PM_MSE">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>530</y>
+           <width>171</width>
+           <height>25</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Mean Squared Error :</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_PM_RMSE">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>560</y>
+           <width>191</width>
+           <height>25</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Root Mean Square Error :</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_PM_MAE">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>620</y>
+           <width>191</width>
+           <height>25</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Mean Absolute Error :</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_PM_MRD">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>590</y>
+           <width>201</width>
+           <height>25</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Mean Residual Deviance :</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_PM_MAE">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>620</y>
+           <width>151</width>
+           <height>25</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_PM_MRD">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>590</y>
+           <width>151</width>
+           <height>25</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QTabWidget" name="tabWidget_PM_Estimator">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>120</y>
+           <width>391</width>
+           <height>285</height>
+          </rect>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="tab_DL">
+          <attribute name="title">
+           <string>Deep Learning</string>
+          </attribute>
+          <widget class="QLabel" name="tab_PM_Distribution">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>10</y>
+             <width>101</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Distribution :</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="tab_PM_Activation">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>40</y>
+             <width>141</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Activation :</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="tab_PM_Epochs">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>130</y>
+             <width>71</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Epochs :</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="tab_PM_Hidden">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>100</y>
+             <width>121</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Hidden Layers :</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="comboBox_PM_distribution">
+           <property name="geometry">
+            <rect>
+             <x>150</x>
+             <y>10</y>
+             <width>221</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>gaussian</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>quantile</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>poison</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>huber</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>bernoulli</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>multinomial</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>gamma</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>laplace</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>tweedie</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QComboBox" name="comboBox_PM_activation">
+           <property name="geometry">
+            <rect>
+             <x>150</x>
+             <y>40</y>
+             <width>221</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>Rectifier</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>RectifierWithDropout</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Tanh</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>TanhWithDropout</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Maxout</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>MaxoutWithDropout</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QComboBox" name="comboBox_PM_hidden">
+           <property name="geometry">
+            <rect>
+             <x>150</x>
+             <y>100</y>
+             <width>221</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>[32,32,32]</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>[50,50,50]</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>[100,100,100]</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>[200,200,200]</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QComboBox" name="comboBox_PM_loss">
+           <property name="geometry">
+            <rect>
+             <x>150</x>
+             <y>70</y>
+             <width>221</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>Quantile</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Quadratic</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>CrossEntropy</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Huber</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Absolute</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QLabel" name="tab_PM_Loss">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>70</y>
+             <width>121</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Loss Function :</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="comboBox_PM_sparse">
+           <property name="geometry">
+            <rect>
+             <x>150</x>
+             <y>160</y>
+             <width>221</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>False</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>True</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QLabel" name="tab_PM_Sparse">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>160</y>
+             <width>71</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Sparse :</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="comboBox_PM_shuffle">
+           <property name="geometry">
+            <rect>
+             <x>150</x>
+             <y>190</y>
+             <width>221</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>False</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>True</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QLabel" name="tab_PM_shuffle">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>190</y>
+             <width>121</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Shuffle data :</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="tab_PM_L1">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>220</y>
+             <width>51</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>L1 :</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="tab_PM_L2">
+           <property name="geometry">
+            <rect>
+             <x>200</x>
+             <y>220</y>
+             <width>51</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>L2 :</string>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="doubleSpinBox_PM_L1">
+           <property name="geometry">
+            <rect>
+             <x>70</x>
+             <y>220</y>
+             <width>121</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="decimals">
+            <number>1</number>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="doubleSpinBox_PM_L2">
+           <property name="geometry">
+            <rect>
+             <x>250</x>
+             <y>220</y>
+             <width>121</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="decimals">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <double>100.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="spinBox_PM_epochs">
+           <property name="geometry">
+            <rect>
+             <x>150</x>
+             <y>130</y>
+             <width>221</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="decimals">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <double>10000.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>10.000000000000000</double>
+           </property>
+           <property name="value">
+            <double>10.000000000000000</double>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="pushButton_PM_BuildModel">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>410</y>
+           <width>391</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Build Selected Predictive Data Mining Model</string>
+         </property>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_10">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>490</y>
+           <width>391</width>
+           <height>171</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Model Performance</string>
+         </property>
+         <widget class="QLineEdit" name="lineEdit_PM_MSE">
+          <property name="geometry">
+           <rect>
+            <x>220</x>
+            <y>40</y>
+            <width>151</width>
+            <height>25</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QProgressBar" name="progressBar">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>460</y>
+           <width>301</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_7">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>460</y>
+           <width>81</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Progress :</string>
+         </property>
+        </widget>
+        <zorder>groupBox_10</zorder>
+        <zorder>lineEdit_PM_RMSE</zorder>
+        <zorder>label_PM_MSE</zorder>
+        <zorder>label_PM_RMSE</zorder>
+        <zorder>label_PM_MAE</zorder>
+        <zorder>label_PM_MRD</zorder>
+        <zorder>lineEdit_PM_MAE</zorder>
+        <zorder>lineEdit_PM_MRD</zorder>
+        <zorder>tabWidget_PM_Estimator</zorder>
+        <zorder>pushButton_PM_BuildModel</zorder>
+        <zorder>progressBar</zorder>
+        <zorder>label_7</zorder>
+       </widget>
+       <widget class="QLabel" name="label_PM_hum">
+        <property name="geometry">
+         <rect>
+          <x>800</x>
+          <y>40</y>
+          <width>101</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Humidity(%)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_PM_wndspd">
+        <property name="geometry">
+         <rect>
+          <x>930</x>
+          <y>40</y>
+          <width>131</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Windspeed(m/sec)</string>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_7">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>10</y>
+          <width>841</width>
+          <height>671</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Risk Prediction</string>
+        </property>
+        <widget class="QPushButton" name="pushButton_PM_LastWData">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>150</y>
+           <width>231</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Get Last Weather Data Record</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="doubleSpinBox_PM_smoke">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>60</y>
+           <width>141</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="decimals">
+          <number>2</number>
+         </property>
+         <property name="maximum">
+          <double>10000.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>100.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="doubleSpinBox_PM_temp">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>60</y>
+           <width>141</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="doubleSpinBox_PM_humidity">
+         <property name="geometry">
+          <rect>
+           <x>320</x>
+           <y>60</y>
+           <width>141</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="doubleSpinBox_PM_WindSpeed">
+         <property name="geometry">
+          <rect>
+           <x>470</x>
+           <y>60</y>
+           <width>141</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QDateTimeEdit" name="dateTimeEdit_PM_datetime">
+         <property name="geometry">
+          <rect>
+           <x>620</x>
+           <y>60</y>
+           <width>201</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_PM_Predict">
+         <property name="geometry">
+          <rect>
+           <x>460</x>
+           <y>100</y>
+           <width>161</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Predict Risk</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_PM_predictRiskVal">
+         <property name="geometry">
+          <rect>
+           <x>640</x>
+           <y>100</y>
+           <width>181</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QTableView" name="tableView_PM">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>200</y>
+           <width>801</width>
+           <height>461</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">selection-background-color: rgba(252, 168, 0, 150);
+QTableCornerButton::section {
+    background: red;
+    border: 2px outset red;
+}</string>
+         </property>
+         <property name="dragEnabled">
+          <bool>true</bool>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>true</bool>
+         </property>
+         <property name="sortingEnabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_PM_addRecord">
+         <property name="geometry">
+          <rect>
+           <x>260</x>
+           <y>150</y>
+           <width>261</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Add Record to Prediction's table</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_PM_smoke">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>30</y>
+           <width>101</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Smoke(ppm)</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_PM_temp">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>30</y>
+           <width>121</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Temperature(C)</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_12">
+         <property name="geometry">
+          <rect>
+           <x>670</x>
+           <y>30</y>
+           <width>81</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>DateTime</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_PM_FWI">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>100</y>
+           <width>231</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Calculate Fosberg Index</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_PM_calcFWI">
+         <property name="geometry">
+          <rect>
+           <x>260</x>
+           <y>100</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_PM_addweatherRecord">
+         <property name="geometry">
+          <rect>
+           <x>530</x>
+           <y>150</y>
+           <width>291</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Add Record to Weather data Records</string>
+         </property>
+        </widget>
+       </widget>
+       <zorder>groupBox_7</zorder>
+       <zorder>groupBox_6</zorder>
+       <zorder>pushButton_PM_H2Oinit</zorder>
+       <zorder>lineEdit_PM_h2o_response</zorder>
+       <zorder>label_PM_hum</zorder>
+       <zorder>label_PM_wndspd</zorder>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QWebView</class>
+   <extends>QWidget</extends>
+   <header>QtWebKit/QWebView</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="myrc.qrc"/>
+ </resources>
+ <connections/>
+</ui>
