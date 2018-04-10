@@ -1,6 +1,5 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
-// We'll use SoftwareSerial to communicate with the XBee:
 #include <SoftwareSerial.h>
 
 #define uint  unsigned int
